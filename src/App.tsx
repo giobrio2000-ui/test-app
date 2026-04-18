@@ -170,66 +170,66 @@ export default function App() {
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="relative w-full max-w-5xl bg-white rounded-[40px] overflow-hidden shadow-2xl flex flex-col md:flex-row"
+              className="relative w-full max-w-5xl bg-white rounded-3xl md:rounded-[40px] overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] md:max-h-none overflow-y-auto md:overflow-visible"
             >
               <button 
                 onClick={() => setIsOverviewOpen(false)}
-                className="absolute top-8 right-8 p-3 rounded-full bg-slate-100 hover:bg-brand-primary hover:text-white transition-colors z-20"
+                className="absolute top-4 right-4 md:top-8 md:right-8 p-2 md:p-3 rounded-full bg-slate-100/80 backdrop-blur hover:bg-brand-primary hover:text-white transition-colors z-30"
               >
-                <X size={24} />
+                <X size={20} className="md:w-6 md:h-6" />
               </button>
 
               {/* Left Pane: Visual Roadmap */}
-              <div className="md:w-2/5 bg-brand-primary p-12 text-white flex flex-col justify-between relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full opacity-10">
-                  <div className="absolute top-[-10%] right-[-10%] w-64 h-64 border-[40px] border-white rounded-full" />
-                  <div className="absolute bottom-[-20%] left-[-20%] w-96 h-96 border-[2px] border-white rounded-full" />
+              <div className="w-full md:w-2/5 bg-brand-primary p-8 md:p-12 text-white flex flex-col justify-between relative overflow-hidden shrink-0">
+                <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                  <div className="absolute top-[-10%] right-[-10%] w-48 h-48 md:w-64 md:h-64 border-[30px] md:border-[40px] border-white rounded-full" />
+                  <div className="absolute bottom-[-20%] left-[-20%] w-72 h-72 md:w-96 md:h-96 border-[1px] md:border-[2px] border-white rounded-full" />
                 </div>
                 
                 <div className="relative z-10">
-                  <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/20 rounded-full text-xs font-black uppercase tracking-widest mb-12">
-                    <Map size={14} /> Course Blueprint
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest mb-8 md:mb-12">
+                    <Map size={12} /> Course Blueprint
                   </div>
                   
-                  <div className="space-y-12">
+                  <div className="space-y-8 md:space-y-12">
                     {sections.map((s, idx) => (
-                      <div key={s.id} className="flex items-center gap-6 group">
+                      <div key={s.id} className="flex items-center gap-4 md:gap-6 group">
                         <div className="relative">
-                          <div className="w-12 h-12 rounded-2xl bg-white text-brand-primary flex items-center justify-center font-black text-xl shadow-lg">
+                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white text-brand-primary flex items-center justify-center font-black text-lg md:text-xl shadow-lg">
                             {s.id}
                           </div>
                           {idx < sections.length - 1 && (
-                            <div className="absolute top-12 left-6 w-0.5 h-12 bg-white/30" />
+                            <div className="absolute top-10 left-5 md:top-12 md:left-6 w-0.5 h-8 md:h-12 bg-white/30" />
                           )}
                         </div>
                         <div>
-                          <h4 className="font-bold text-lg leading-tight">{s.title.split(':')[1].trim()}</h4>
+                          <h4 className="font-bold text-base md:text-lg leading-tight">{s.title.split(':')[1].trim()}</h4>
                         </div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="relative z-10 pt-12">
-                  <p className="text-white/60 text-xs font-black uppercase tracking-[0.3em]">
+                <div className="relative z-10 pt-8 md:pt-12 hidden md:block">
+                  <p className="text-white/60 text-[10px] font-black uppercase tracking-[0.3em]">
                     A Structured Excellence Path
                   </p>
                 </div>
               </div>
 
               {/* Right Pane: Narrative Text */}
-              <div className="md:w-3/5 p-12 md:p-20 overflow-y-auto max-h-[90vh]">
-                <div className="max-w-md">
+              <div className="w-full md:w-3/5 p-8 md:p-20 overflow-y-auto bg-white">
+                <div className="max-w-md mx-auto md:mx-0">
                   <div className="mb-2">
                     <span className="text-[10px] font-black text-brand-primary uppercase tracking-[0.4em] opacity-70">
                       Project Goals
                     </span>
                   </div>
-                  <h2 className="text-4xl font-black text-slate-900 mb-8 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 md:mb-8 leading-tight">
                     The Journey to <span className="text-brand-primary italic font-serif">Excellence</span>
                   </h2>
                   
-                  <div className="space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
+                  <div className="space-y-4 md:space-y-6 text-base md:text-lg text-slate-600 leading-relaxed font-medium">
                     <p>
                       This course is designed to guide you through a logical progression 
                       from <span className="text-slate-900 font-bold">individual mastery</span> to 
@@ -250,20 +250,20 @@ export default function App() {
                       learning how to use AI and digital tools to work seamlessly with others.
                     </p>
                     
-                    <p className="pt-4 border-t border-slate-100">
+                    <p className="pt-4 border-t border-slate-100 italic text-sm md:text-base">
                       By the end of this course, you will have a complete toolkit to stay organized, 
                       focused, and ahead of the curve in today's fast-paced world.
                     </p>
 
-                    <div className="pt-8 flex flex-col items-start gap-6">
+                    <div className="pt-6 md:pt-8 flex flex-col items-start gap-6">
                       <div className="text-slate-900">
-                        <p className="text-xl font-black mb-1">Success is a matter of organization.</p>
-                        <p className="text-brand-primary font-black tracking-widest uppercase text-sm">Enjoy your journey!</p>
+                        <p className="text-lg md:text-xl font-black mb-1 leading-tight">Success is a matter of organization.</p>
+                        <p className="text-brand-primary font-black tracking-widest uppercase text-[10px] md:text-sm">Enjoy your journey!</p>
                       </div>
                       
                       <button 
                         onClick={startPath}
-                        className="group flex items-center gap-3 px-10 py-5 bg-brand-primary text-white rounded-full font-black shadow-xl shadow-brand-primary/20 hover:scale-105 active:scale-95 transition-all"
+                        className="group w-full md:w-auto flex items-center justify-center gap-3 px-8 md:px-10 py-4 md:py-5 bg-brand-primary text-white rounded-full font-black shadow-xl shadow-brand-primary/20 hover:scale-105 active:scale-95 transition-all text-sm md:text-base"
                       >
                         Start Your Path <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                       </button>
