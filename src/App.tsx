@@ -25,6 +25,7 @@ interface Resource {
   title: string;
   lang: 'IT' | 'EN';
   type: string;
+  summary: string;
   expertOpinion: string;
   link?: string;
 }
@@ -51,14 +52,16 @@ const sections: Section[] = [
         title: "La Matrice di Eisenhower: come distinguere l'importante dall'urgente",
         lang: 'IT',
         type: "Article",
-        expertOpinion: "You can't be organized if you can't prioritize. This is the foundational 'alphabet' of organization. It teaches learners how to categorize tasks to avoid the 'urgency trap'.",
+        summary: "You can't be organized if you can't prioritize. This is the foundational 'alphabet' of organization. It teaches learners how to categorize tasks to avoid the 'urgency trap'.",
+        expertOpinion: "This article is selected for its exceptional visual layout and cognitive scaffolding. As an instructional designer, I prioritize resources that reduce cognitive load; the use of clear quadrants and practical examples facilitates immediate knowledge transfer. The source validity is guaranteed by its leadership in the productivity field, making it the perfect entry point for mastering complex prioritization.",
         link: "https://asana.com/it/resources/eisenhower-matrix"
       },
       {
         title: "How to gain control of your free time - Laura Vanderkam",
         lang: 'EN',
         type: "Video",
-        expertOpinion: "Vanderkam flips the script on 'not having enough time.' She argues that organization is a matter of choice and ownership. It’s highly engaging and provides a psychological shift necessary for the rest of the course.",
+        summary: "Vanderkam flips the script on 'not having enough time.' She argues that organization is a matter of choice and ownership. It’s highly engaging and provides a psychological shift necessary for the rest of the course.",
+        expertOpinion: "TED talks are chosen for their high emotional resonance and storytelling efficacy, which are key for adult learning. Vanderkam’s presentation is pedagogically sound because it challenges core beliefs through relatable narratives. This video serves as a schema disruptor, forcing the learner to re-evaluate their perception of time ownership. The professional production quality ensures maximum engagement and retention.",
         link: "https://www.ted.com/talks/laura_vanderkam_how_to_gain_control_of_your_free_time"
       }
     ],
@@ -75,14 +78,16 @@ const sections: Section[] = [
         title: "Tecnica del Pomodoro: Smetti di procrastinare e migliora la concentrazione",
         lang: 'IT',
         type: "Article",
-        expertOpinion: "This offers a practical, 'low-barrier' tool. It explains the science of why our brains need intervals, making it perfect for learners who feel overwhelmed by long to-do lists.",
+        summary: "This offers a practical, 'low-barrier' tool. It explains the science of why our brains need intervals, making it perfect for learners who feel overwhelmed by long to-do lists.",
+        expertOpinion: "This resource provides a masterclass in 'just-in-time' learning. It was handpicked because it breaks down a behavioral technique into achievable micro-steps, perfectly aligned with the science of brain fatigue and intervals. The clean, minimalist UI of the article mirrors the simplicity of the technique itself, ensuring that learners struggling with focus find a low-barrier path to immediate implementation.",
         link: "https://www.todoist.com/it/productivity-methods/pomodoro-technique"
       },
       {
         title: "How to Use Cal Newport’s Deep Work Technique to Tackle Demanding Projects",
         lang: 'EN',
         type: "Article",
-        expertOpinion: "Provides a practical framework to transition from shallow, distracted tasks to high-impact concentration. It breaks down the 'Deep Work' philosophy into actionable strategies to reclaim focus.",
+        summary: "Provides a practical framework to transition from shallow, distracted tasks to high-impact concentration. It breaks down the 'Deep Work' philosophy into actionable strategies to reclaim focus.",
+        expertOpinion: "Cal Newport’s methodology is academically rigorous, and this guide provides the necessary instructional bridge for industrial application. We selected this for its actionable checklists and high-contrast infographics that support diverse learning styles. It successfully translates a complex philosophy into a high-impact read, backed by data-driven expertise in professional time-tracking.",
         link: "https://toggl.com/blog/deep-work-technique"
       }
     ],
@@ -99,14 +104,16 @@ const sections: Section[] = [
         title: "Il METODO per raggiungere i tuoi OBIETTIVI (SMART)",
         lang: 'IT',
         type: "Video",
-        expertOpinion: "Offers a professional and business-oriented perspective on the SMART framework. The structure is highly schematic and jargon-free, making it easy to create objectives.",
+        summary: "Offers a professional and business-oriented perspective on the SMART framework. The structure is highly schematic and jargon-free, making it easy to create objectives.",
+        expertOpinion: "Multimedia integration is vital for diverse learning cohorts. This video was selected for its high instructional clarity and 'step-mode' delivery. The visual cues help anchor the SMART acronym more effectively than static text. I appreciate the use of real-world business scenarios instead of generic examples; it is a resource designed for high retention through balanced pacing.",
         link: "https://www.youtube.com/watch?v=esS8-zcUiII"
       },
       {
         title: "Agile project management: What is it and how to get started",
         lang: 'EN',
         type: "Guide",
-        expertOpinion: "Provides a comprehensive overview of Agile principles like iterative development and continuous improvement. Highly visual and standardized for global business.",
+        summary: "Provides a comprehensive overview of Agile principles like iterative development and continuous improvement. Highly visual and standardized for global business.",
+        expertOpinion: "Atlassian’s documentation is the industry gold standard. We included this guide because it employs a non-linear instructional path, allowing learners to dive deep or skim based on their prior knowledge. The use of professional terminology combined with clear explanatory diagrams ensures that even complex Agile concepts remain accessible and practically applicable in global business environments.",
         link: "https://www.atlassian.com/agile/project-management"
       }
     ],
@@ -123,20 +130,98 @@ const sections: Section[] = [
         title: "Come si riconosce, oggi, un team ad alte perfomance? E, come fare per crearne uno?",
         lang: 'IT',
         type: "Article",
-        expertOpinion: "Provides a management-focused blueprint for building high-performance teams, emphasizing strategic alignment, trust, and how technology acts as a catalyst for results.",
+        summary: "Provides a management-focused blueprint for building high-performance teams, emphasizing strategic alignment, trust, and how technology acts as a catalyst for results.",
+        expertOpinion: "This resource is a strategic pick for its emphasis on the 'Human-Digital' intersection. The instructional value lies in its evidence-based approach to team dynamics rather than mere opinion. The layout leads the reader through a logical evolution of high-performance concepts, making it excellent for developing systemic thinking and leadership qualities in a modern professional context.",
         link: "https://www.cio.com/article/3491292/come-si-riconosce-oggi-un-team-ad-alte-perfomance-e-come-fare-per-crearne-uno.html"
       },
       {
         title: "Aneesh Raman: AI won’t decide the future of work—unless you let it",
         lang: 'EN',
         type: "Podcast",
-        expertOpinion: "Offers a strategic perspective on how AI is reshaping teamwork. Features insights on managing human-AI collaboration and building an intelligent digital ecosystem.",
+        summary: "Offers a strategic perspective on how AI is reshaping teamwork. Features insights on managing human-AI collaboration and building an intelligent digital ecosystem.",
+        expertOpinion: "Podcasts are effective for 'ambient learning' during transit or deep work breaks. This episode features high-level thought leadership from industry experts, ensuring a future-proof perspective. Hearing the nuances of expert dialogue helps learners grasp the social and ethical complexities of AI integration. The reasoning behind its choice is to provide a visionary capstone to the learning journey.",
         link: "https://www.microsoft.com/en-us/worklab/podcast"
       }
     ],
     content: "Build a scalable and intelligent digital ecosystem by aligning human dynamics with cutting-edge AI integration and asynchronous workflows."
   }
 ];
+
+const ResourceCard: React.FC<{ resource: Resource }> = ({ resource }) => {
+  const [isShowingExpert, setIsShowingExpert] = React.useState(false);
+
+  return (
+    <div className="group/resource flex flex-col p-6 bg-white rounded-2xl border-2 border-slate-100 hover:border-brand-primary transition-all shadow-sm hover:shadow-md h-full min-h-[250px] relative overflow-hidden">
+      <div className="flex items-center justify-between mb-4 relative z-10">
+        <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${
+          resource.lang === 'IT' ? 'bg-emerald-100 text-emerald-700' : 'bg-blue-100 text-blue-700'
+        }`}>
+          {resource.lang} • {resource.type}
+        </span>
+        <button 
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setIsShowingExpert(!isShowingExpert);
+          }}
+          className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest transition-all border ${
+            isShowingExpert 
+              ? 'bg-brand-primary text-white border-brand-primary' 
+              : 'bg-white text-slate-400 border-slate-200 hover:border-brand-primary hover:text-brand-primary'
+          }`}
+        >
+          {isShowingExpert ? 'Back to Summary' : 'Why this resource?'}
+        </button>
+      </div>
+
+      <div className="flex-1 flex flex-col relative z-10">
+        <AnimatePresence mode="wait">
+          {!isShowingExpert ? (
+            <motion.div
+              key="summary"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="flex flex-col flex-1 h-full"
+            >
+              <h4 className="font-extrabold text-slate-900 text-lg mb-4 leading-tight">
+                {resource.title}
+              </h4>
+              <p className="text-sm text-slate-600 leading-relaxed font-semibold mb-6">
+                {resource.summary}
+              </p>
+              <div className="mt-auto flex items-center justify-between pt-4 border-t border-slate-50">
+                <a 
+                  href={resource.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-brand-primary font-black text-xs uppercase tracking-widest hover:translate-x-1 transition-transform"
+                >
+                  Access Content <ExternalLink size={14} />
+                </a>
+              </div>
+            </motion.div>
+          ) : (
+            <motion.div
+              key="expert"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="flex flex-col p-5 bg-slate-50 rounded-xl border border-slate-100 flex-1 h-full"
+            >
+              <p className="text-[10px] font-black text-brand-primary uppercase tracking-[0.2em] mb-3">
+                Instructional Design View
+              </p>
+              <p className="text-sm text-slate-700 leading-relaxed font-medium italic">
+                {resource.expertOpinion}
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+};
 
 export default function App() {
   const [expandedIds, setExpandedIds] = useState<number[]>([]);
@@ -387,33 +472,7 @@ export default function App() {
                         {section.resources && (
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {section.resources.map((res, i) => (
-                              <a 
-                                key={i} 
-                                href={res.link} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="group/resource flex flex-col p-6 bg-white rounded-2xl border-2 border-slate-100 hover:border-brand-primary transition-all shadow-sm hover:shadow-md active:scale-95"
-                              >
-                                <div className="flex items-center justify-between mb-4">
-                                  <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${
-                                    res.lang === 'IT' ? 'bg-emerald-100 text-emerald-700' : 'bg-blue-100 text-blue-700'
-                                  }`}>
-                                    {res.lang} • {res.type}
-                                  </span>
-                                  <ExternalLink size={18} className="text-slate-300 group-hover/resource:text-brand-primary transition-colors" />
-                                </div>
-                                <h4 className="font-extrabold text-slate-900 text-lg mb-4 group-hover/resource:text-brand-primary transition-colors leading-tight">
-                                  {res.title}
-                                </h4>
-                                <div className="mt-auto border-t border-slate-50 pt-4">
-                                  <p className="text-[10px] font-black text-brand-primary uppercase tracking-widest mb-2 opacity-70">
-                                    WHY THIS RESOURCE?
-                                  </p>
-                                  <p className="text-sm text-slate-600 leading-relaxed font-semibold">
-                                    {res.expertOpinion}
-                                  </p>
-                                </div>
-                              </a>
+                              <ResourceCard key={i} resource={res} />
                             ))}
                           </div>
                         )}
