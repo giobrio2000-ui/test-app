@@ -15,7 +15,10 @@ import {
   CheckCircle2,
   Map,
   X,
-  ArrowRight
+  ArrowRight,
+  Brain,
+  ClipboardCheck,
+  Cpu
 } from 'lucide-react';
 
 interface Resource {
@@ -41,7 +44,7 @@ const sections: Section[] = [
     id: 1,
     title: "Module 1: Mastering Personal Productivity",
     subtitle: "Focus: Managing time, energy, and individual workflows",
-    icon: Target,
+    icon: Clock,
     color: "bg-brand-primary",
     resources: [
       {
@@ -65,7 +68,7 @@ const sections: Section[] = [
     id: 2,
     title: "Module 2: The Art of Focus and Deep Work",
     subtitle: "Focus: Minimizing distractions and managing digital clutter",
-    icon: Focus,
+    icon: Brain,
     color: "bg-[#5D64FF]",
     resources: [
       {
@@ -89,7 +92,7 @@ const sections: Section[] = [
     id: 3,
     title: "Module 3: Project Management & Goal Setting",
     subtitle: "Focus: Turning abstract ideas into actionable plans",
-    icon: Layers,
+    icon: ClipboardCheck,
     color: "bg-[#7C82FF]",
     resources: [
       {
@@ -113,7 +116,7 @@ const sections: Section[] = [
     id: 4,
     title: "Module 4: Team Collaboration & Digital Ecosystems",
     subtitle: "Focus: Synergy, AI Integration, and Seamless Workflows",
-    icon: Zap,
+    icon: Cpu,
     color: "bg-[#9BA0FF]",
     resources: [
       {
@@ -170,17 +173,17 @@ export default function App() {
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="relative w-full max-w-5xl bg-white rounded-3xl md:rounded-[40px] overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] md:max-h-none overflow-y-auto md:overflow-visible"
+              className="relative w-full max-w-5xl bg-white rounded-3xl md:rounded-[40px] shadow-2xl flex flex-col md:flex-row max-h-[90vh] md:max-h-[800px] overflow-hidden"
             >
               <button 
                 onClick={() => setIsOverviewOpen(false)}
-                className="absolute top-4 right-4 md:top-8 md:right-8 p-2 md:p-3 rounded-full bg-slate-100/80 backdrop-blur hover:bg-brand-primary hover:text-white transition-colors z-30"
+                className="absolute top-4 right-4 md:top-8 md:right-8 p-2 md:p-3 rounded-full bg-slate-100/80 backdrop-blur hover:bg-brand-primary hover:text-white transition-colors z-[60]"
               >
                 <X size={20} className="md:w-6 md:h-6" />
               </button>
 
               {/* Left Pane: Visual Roadmap */}
-              <div className="w-full md:w-2/5 bg-brand-primary p-8 md:p-12 text-white flex flex-col justify-between relative overflow-hidden shrink-0">
+              <div className="w-full md:w-2/5 bg-brand-primary p-8 md:p-12 text-white flex flex-col justify-between relative overflow-y-auto md:overflow-hidden shrink-0">
                 <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                   <div className="absolute top-[-10%] right-[-10%] w-48 h-48 md:w-64 md:h-64 border-[30px] md:border-[40px] border-white rounded-full" />
                   <div className="absolute bottom-[-20%] left-[-20%] w-72 h-72 md:w-96 md:h-96 border-[1px] md:border-[2px] border-white rounded-full" />
@@ -218,8 +221,8 @@ export default function App() {
               </div>
 
               {/* Right Pane: Narrative Text */}
-              <div className="w-full md:w-3/5 p-8 md:p-20 overflow-y-auto bg-white">
-                <div className="max-w-md mx-auto md:mx-0">
+              <div className="w-full md:w-3/5 p-8 md:p-20 overflow-y-auto bg-white flex items-center">
+                <div className="max-w-md mx-auto md:mx-0 w-full">
                   <div className="mb-2">
                     <span className="text-[10px] font-black text-brand-primary uppercase tracking-[0.4em] opacity-70">
                       Project Goals
@@ -277,9 +280,9 @@ export default function App() {
       </AnimatePresence>
 
       {/* Professional Header */}
-      <header className="bg-white border-b border-slate-200 py-16 px-6 mb-12 text-center relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-bg rounded-full -mr-32 -mt-32 opacity-50 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-bg rounded-full -ml-32 -mb-32 opacity-50 blur-3xl" />
+      <header className="bg-gradient-to-b from-white to-[#e1f8ff] border-b border-slate-200 py-16 px-6 mb-12 text-center relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-bg rounded-full -mr-32 -mt-32 opacity-30 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-bg rounded-full -ml-32 -mb-32 opacity-30 blur-3xl" />
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -328,8 +331,8 @@ export default function App() {
             return (
               <motion.div
                 key={section.id}
-                initial={{ opacity: 0, y: 30, scale: 1, backgroundColor: 'rgba(255, 255, 255, 0)' }}
-                whileInView={{ opacity: 1, y: 0, scale: 1, backgroundColor: 'rgba(255, 255, 255, 1)' }}
+                initial={{ opacity: 0, y: 30, scale: 1 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ 
                   duration: 0.8, 
@@ -337,7 +340,7 @@ export default function App() {
                   ease: [0.21, 1.02, 0.47, 0.98] 
                 }}
                 style={{ transformStyle: 'preserve-3d' }}
-                className={`group rounded-[32px] border transition-all duration-500 overflow-hidden flex flex-col ${
+                className={`group bg-gradient-to-b from-white to-[#e1f8ff] rounded-[32px] border transition-all duration-500 overflow-hidden flex flex-col ${
                   isExpanded 
                     ? 'border-brand-primary shadow-2xl ring-4 ring-brand-primary/5' 
                     : 'border-slate-200 shadow-sm hover:border-brand-primary/40 hover:shadow-xl hover:-translate-y-1'
