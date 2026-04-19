@@ -221,8 +221,8 @@ export default function App() {
               </div>
 
               {/* Right Pane: Narrative Text */}
-              <div className="w-full md:w-3/5 p-8 md:p-20 overflow-y-auto bg-white flex items-center">
-                <div className="max-w-md mx-auto md:mx-0 w-full">
+              <div className="w-full md:w-3/5 p-8 md:p-20 overflow-y-auto bg-white">
+                <div className="max-w-md mx-auto md:mx-0 w-full flex flex-col min-h-full">
                   <div className="mb-2">
                     <span className="text-[10px] font-black text-brand-primary uppercase tracking-[0.4em] opacity-70">
                       Project Goals
@@ -258,7 +258,7 @@ export default function App() {
                       focused, and ahead of the curve in today's fast-paced world.
                     </p>
 
-                    <div className="pt-6 md:pt-8 flex flex-col items-start gap-6">
+                    <div className="pt-6 md:pt-8 flex flex-col items-start gap-6 pb-4">
                       <div className="text-slate-900">
                         <p className="text-lg md:text-xl font-black mb-1 leading-tight">Success is a matter of organization.</p>
                         <p className="text-brand-primary font-black tracking-widest uppercase text-[10px] md:text-sm">Enjoy your journey!</p>
@@ -266,7 +266,7 @@ export default function App() {
                       
                       <button 
                         onClick={startPath}
-                        className="group w-full md:w-auto flex items-center justify-center gap-3 px-8 md:px-10 py-4 md:py-5 bg-brand-primary text-white rounded-full font-black shadow-xl shadow-brand-primary/20 hover:scale-105 active:scale-95 transition-all text-sm md:text-base"
+                        className="group w-full md:w-auto flex items-center justify-center gap-3 px-8 md:px-10 py-4 md:py-5 bg-brand-primary text-white rounded-full font-black shadow-xl shadow-brand-primary/20 hover:scale-105 active:scale-95 transition-all text-sm md:text-base mb-4"
                       >
                         Start Your Path <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                       </button>
