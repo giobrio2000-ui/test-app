@@ -183,13 +183,13 @@ export default function App() {
               </button>
 
               {/* Left Pane: Visual Roadmap */}
-              <div className="w-full md:w-2/5 bg-brand-primary p-8 md:p-12 text-white flex flex-col justify-between relative overflow-y-auto md:overflow-hidden shrink-0">
+              <div className="w-full md:w-2/5 bg-brand-primary p-8 md:p-12 text-white flex flex-col justify-between relative overflow-hidden shrink-0 px-8">
                 <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                   <div className="absolute top-[-10%] right-[-10%] w-48 h-48 md:w-64 md:h-64 border-[30px] md:border-[40px] border-white rounded-full" />
                   <div className="absolute bottom-[-20%] left-[-20%] w-72 h-72 md:w-96 md:h-96 border-[1px] md:border-[2px] border-white rounded-full" />
                 </div>
                 
-                <div className="relative z-10">
+                <div className="relative z-10 w-full">
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest mb-8 md:mb-12">
                     <Map size={12} /> Course Blueprint
                   </div>
@@ -206,7 +206,7 @@ export default function App() {
                           )}
                         </div>
                         <div>
-                          <h4 className="font-bold text-base md:text-lg leading-tight">{s.title.split(':')[1].trim()}</h4>
+                          <h4 className="font-bold text-sm md:text-lg leading-tight">{s.title.split(':')[1].trim()}</h4>
                         </div>
                       </div>
                     ))}
@@ -427,11 +427,6 @@ export default function App() {
         </div>
 
         <footer className="mt-24 text-center pb-12">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-full shadow-sm hover:shadow-md transition-shadow cursor-default group mb-8">
-            <div className="w-5 h-5 rounded bg-brand-primary" />
-            <span className="text-sm font-bold text-slate-800 tracking-tight">learning hub path</span>
-          </div>
-          
           <div className="space-y-2">
             <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em]">
               Organizational Excellence
